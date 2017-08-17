@@ -19,11 +19,11 @@ def start(intv):
     while True:
         print c
         sel = browser.find_element_by_xpath("//select[@id='ctl00_ContentPlaceHolder2_ddlLine']")
-        Select(sel).select_by_value(u'杨浦')
+        Select(sel).select_by_value(LINE)
 
         sel = browser.find_element_by_xpath("//select[@id='ctl00_ContentPlaceHolder2_ddlStationAndTime']")
-        Select(sel).select_by_value(u'五角场  20:00')
-        #browser.find_element_by_id("ctl00_ContentPlaceHolder2_btnSubmit").click()
-        browser.get(SUBMIT_URL)
+        Select(sel).select_by_value(ADRRESS_TIME)
+        browser.find_element_by_id("ctl00_ContentPlaceHolder2_btnSubmit").click()
+        #browser.get(SUBMIT_URL)
 
         c = c+1
